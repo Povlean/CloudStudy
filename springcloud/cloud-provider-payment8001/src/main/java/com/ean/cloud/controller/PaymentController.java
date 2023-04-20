@@ -25,7 +25,7 @@ public class PaymentController {
             return new CommonResult(444,"创建失败");
         }
         log.info("create payment-->" + payment.toString());
-        return new CommonResult(200,"创建成功",payment.toString());
+        return new CommonResult(200,"创建成功",payment);
     }
 
     @GetMapping("/payment/get/{id}")
@@ -35,6 +35,6 @@ public class PaymentController {
             return new CommonResult(444,"查询失败");
         }
         log.info("get payment-->" + payment);
-        return new CommonResult(200,"查询成功",payment.toString());
+        return new CommonResult(200,"查询成功",payment);
     }
 }
