@@ -1,16 +1,16 @@
 server:
-  port: 7001
+  port: 7002
 # 注册中心配置
 eureka:
   instance:
-    hostname: eureka7001.com
+    hostname: eureka7002.com
   client:
     # 表示不向注册中心注册自己
     register-with-eureka: false
     # 表示自己就是注册中心，用户维护服务实例，不需要去检索服务
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
 spring:
   application:
-    name: eureka7001
+    name: eureka7002
